@@ -1,0 +1,40 @@
+﻿@model WebApplication2.Models.webpages_Roles
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RoleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RoleCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoleCode)
+        </dd>
+
+    </dl>
+</div>
+
+
+<div>
+    <a href="@Url.Action( "Index", new { id = Model.RoleId })" class="btn btn-info">Edit</a>
+</div>
+
+<div style="padding-top:1em;">
+    <a href="@Url.Action( "Index")" class="btn btn-info">Back to List</a>
+</div>
+
